@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Ticket Generator</title>
+    <link rel="stylesheet" href="ticktstyle.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p>Secure your spot at next year’s biggest coding conference.</p>
+
+        <form id="ticketForm">
+            <label for="avatar">Upload Avatar</label>
+            <div class="upload-box">
+                <input type="file" id="avatar" accept="image/png, image/jpeg">
+                <span class="hint">Upload JPG or PNG (max 500KB)</span>
+                <p class="error-message" id="avatarError"></p>
+            </div>
+
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter your name">
+            <p class="error-message" id="nameError"></p>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="example@email.com">
+            <p class="error-message" id="emailError"></p>
+
+            <label for="github">GitHub Username</label>
+            <input type="text" id="github" placeholder="@yourusername">
+            <p class="error-message" id="githubError"></p>
+
+            <button type="submit">Generate My Ticket</button>
+        </form>
+
+        <div id="ticketPreview" class="hidden">
+            <h2>Your Ticket</h2>
+            <img id="previewAvatar" alt="Avatar Preview">
+            <p><strong>Name:</strong> <span id="previewName"></span></p>
+            <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+            <p><strong>GitHub:</strong> <span id="previewGithub"></span></p>
+        </div>
+    </div>
+
+    <script src="ticktscript.js"></script>
+
+</body>
+</html>
