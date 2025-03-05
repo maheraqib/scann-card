@@ -1,0 +1,90 @@
+  /* Reset styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Centering the card */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d6e2f0;
+}
+
+/* Card container */
+.card {
+    background: #fff;
+    width: 320px;
+    height: 500px;
+    padding: 15px 15px 0px 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.card:hover {
+    transform: translateY(0px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* QR Code container with background */
+.qr-container {
+    width: 290px;
+    height: 290px;
+    background-color: #0080F9;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-code {
+    width: 50%;
+    height: 50%;
+    max-width: 200px;
+    border-radius: 8px;
+    opacity: 0.8;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.qr-container:hover .qr-code {
+    transform: scale(1.1);
+}
+
+/* Heading styles */
+.card h2 {
+    font-size: 20px;
+    color: #333;
+    padding: 20px 20px;
+    font-weight: bold;
+}
+
+/* Paragraph styles */
+.card p {
+    font-size: 14px;
+    color: black;
+    padding: 0px 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
